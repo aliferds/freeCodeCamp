@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #dedede;
+  font-size: 16px;
+  width: 100%;
+  height: 100vh;
+}
+
+h1 {
+  color: #00bbed;
+  text-align: center;
+  padding: 0.625rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  margin-bottom: 1rem;
+}
+
+table {
+  background-color: #eeeeee;
+  color: #2e2e2e;
+  font-size: 1rem;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+thead {
+  background-color: #2e2e2e;
+  color: #eeeeee;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-align: center;
+}
+
+thead tr th {
+  padding: 0 0.5rem;
+}
+
+thead tr th:not(:last-of-type) {
+  border-right: 1px solid #eee;
+}
+
+tbody tr td:first-of-type {
+  font-weight: 600;
+  padding-right: 0.25rem;
+}
+
+tbody tr:not(:last-of-type) {
+  border-bottom: 1px solid #2e2e2e;
+}
+
+tbody tr td {
+  padding: 0.5rem 0 0.5rem 0.2rem;
+}
+
+tbody tr td:not(:last-of-type) {
+  border-right: 1px solid #2e2e2e;
+}
+
+span {
+  display: inline-block;
+}
+
+tr[class="read"] {
+  background-image: linear-gradient(#00bb55, #00bb33);
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(#ffbb55, #ffbb33);
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(#00bbff, #00bbdd);
+}
+
+tr[class="to-read"] span[class="status"] {
+  border: 1px solid yellow;
+  background-image: linear-gradient(yellow, lightyellow);
+}
+
+tr[class="read"] span[class="status"] {
+  border: 1px solid green;
+  background-image: linear-gradient(green, lightgreen);
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 1px solid blue;
+  background-image: linear-gradient(blue, lightblue);
+}
+
+span[class="status"], span[class^="rate"] {
+  height: 25px;
+  width: 90px;
+  padding: 2px;
+}
+
+span[class^="rate"] > span {
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 2px;
+  height: 15px;
+  width: 15px;
+  background-color: #ffffff;
+}
+
+span[class*="one"] span:nth-of-type(1) {
+  background-image: linear-gradient(orange, yellow);
+}
+
+span[class*="two"] span:nth-of-type(1) {
+  background-image: linear-gradient(orange, yellow);
+}
+
+span[class*="two"] span:nth-of-type(2) {
+  background-image: linear-gradient(orange, yellow);
+}
+
+span[class*="three"] span {
+  background-image: linear-gradient(orange, yellow);
+}
+
+span[class~="one"] span:first-child {
+  background-image: linear-gradient(goldenrod, gold, yellow);
+}
+
+span[class~="two"] span:first-child,
+span[class~="two"] span:nth-child(2) {
+  background-image: linear-gradient(goldenrod, gold, yellow);
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(goldenrod, gold, yellow);
+}
