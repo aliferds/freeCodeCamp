@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="desc" content="A simple survey webpage created for html certificate project for freeCodeCamp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+</head>
+<body>
+  <h1 id="title">Survey Form for customers</h1>
+  <p id="description">This form is for people who wants create a webpage!</p>
+
+  <form action="" id="survey-form">
+    <fieldset id="personal-information">
+      <legend>Personal Information</legend>
+      <div>
+        <label for="name" id="name-label">Full Name: </label>
+        <input type="text" name="name" id="name" required placeholder="e.g., Alifer Silva">
+      </div>
+      <div>
+        <label for="email" id="email-label">Email: </label>
+        <input type="email" name="email" id="email" required placeholder="seu_email@provedor.com">
+      </div>
+      <div>
+        <label for="number" id="number-label">Telefone: </label>
+        <input type="number" name="number" id="number" min="11000000000" max="99999999999" required placeholder="11991999999">
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Are you interest in create an amazing webpage?</legend>
+      <select name="dropdown" id="dropdown">
+        <option value="yes" selected>Yes</option>
+        <option value="not-yet">Not Yet</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>What is your business area?</legend>
+      <input 
+        type="radio"   
+        name="business-area" 
+        id="phisical-products"
+        value="phisical-products"
+      >
+      <label for="phisical-products">Phisical products</label>
+
+      <input type="radio" name="business-area" 
+      id="info-products"
+      value="info-products"
+      >
+      <label for="info-products">Infoproducts</label>
+      <input type="radio" name="business-area" id="food" value="food">
+      <label for="food">Food and Delivery</label>
+      <input type="radio" name="business-area" id="health" value="health">
+      <label for="health">Health</label>
+      <input type="radio" name="business-area" id="education" value="education">
+      <label for="education">Educational</label>
+      <input type="radio" name="business-area" id="events" value="events">
+      <label for="events">Events/Shows</label>
+      <input type="radio" name="business-area" id="construction" value="construction">
+      <label for="construction">Construction</label>
+      <input type="radio" name="business-area" id="other" value="other">
+      <label for="other">Other Area</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>What is most atractive in webpages for you? (select all that aplies)</legend>
+      <input type="checkbox" name="atractive" id="layout" value="layout">
+      <label for="layout">
+        Clean and modern layout
+      </label>
+
+      <input type="checkbox" name="atractive" id="speed" value="speed">
+      <label for="speed">
+        Fast loading speed
+      </label>
+
+      <input type="checkbox" name="atractive" id="navigation" value="navigation">
+      <label for="navigation">
+        Easy navigation and clear menus
+      </label>
+
+      <input type="checkbox" name="atractive" id="mobile" value="mobile">
+      <label for="mobile">
+        Works perfectly on mobile devices
+      </label>
+
+      <input type="checkbox" name="atractive" id="media" value="media">
+      <label for="media">
+        High-quality images and videos
+      </label>
+
+      <input type="checkbox" name="atractive" id="text" value="text">
+      <label for="text">
+        Clear and concise text
+      </label>
+
+      <input type="checkbox" name="atractive" id="no-ads" value="no-ads">
+      <label for="no-ads">
+        No intrusive ads or pop-ups
+      </label>
+
+      <input type="checkbox" name="atractive" id="reviews" value="reviews">
+      <label for="reviews">
+        Customer reviews and testimonials
+      </label>
+    </fieldset>
+
+    <div>
+      <label id="comments-label">Any other information you think what is relevant?</label>
+      <textarea name="comments" id="comments" rows="30" cols="30"></textarea>
+    </div>
+    <button type="submit" id="submit">Send</button>
+  </form>
+</body>
+</html>
