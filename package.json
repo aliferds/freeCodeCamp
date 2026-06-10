@@ -1,0 +1,30 @@
+{
+  "name": "freecodecamp",
+  "version": "1.0.0",
+  "description": "This is a hub repository for freecodecamp code projects",
+  "homepage": "https://github.com/aliferds/freeCodeCamp#readme",
+  "bugs": {
+    "url": "https://github.com/aliferds/freeCodeCamp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliferds/freeCodeCamp.git"
+  },
+  "license": "MIT",
+  "author": "Alifer Duarte Silva",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "vite": "^8.0.16"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  }
+}
