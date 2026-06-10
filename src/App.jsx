@@ -1,10 +1,12 @@
 import React from 'react'
+import PageFrame from './components/PageFrame'
+import { projects } from './data/projects'
 
 function App() {
   return (
     <div>
-      <h1>Meu FreeCodeCamp Portfolio</h1>
-      <p>O React já está funcionando!</p>
+      <h1>Alifer's freeCodeCamp Codes Hub</h1>
+
     </div>
   )
 }
