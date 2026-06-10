@@ -1,4 +1,6 @@
-# freeCodeCamp Codes
+# freeCodeCamp
+
+_Read this in other languages: [Português](README.pt-br.md)_
 
 Welcome to my personal repository dedicated to my learning journey through freeCodeCamp! This space serves as a central hub for all the algorithms, coding challenges, and full-stack certification projects I have built while working through the curriculum.
 
