@@ -1,0 +1,201 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea {
+  font: inherit;
+}
+
+:root {
+  --font-family: "Arial", sans-serif;
+  --font-code: "Courier New", Courier, monospace;
+  --font-size: clamp(1rem, 2.2vh, 1.5rem);
+
+  --bg: whitesmoke;
+  --border-color: #000;
+  --font-color: #333;
+  --font-color-title: #000;
+  --anchor-color: #333;
+  --anchor-hover-color: #fff;
+  
+  --blue-color: #5ae;
+  --yellow-color: #dede00;
+  --purple-color: #aa55ee;
+  --red-color: #ff3333;
+  --green-color: #33cc33;
+  
+  --code-bg-color: #120e16; 
+  --code-font-color: #f8f8f2;
+
+  --margin-txt: clamp(1em, 2.5vh, 1.5em) 0;
+}
+
+.text-blue   { color: var(--blue-color); }
+.text-yellow { color: var(--yellow-color); }
+.text-purple { color: var(--purple-color); }
+.text-red    { color: var(--red-color); }
+.text-green  { color: var(--green-color); }
+
+.bg-blue   { background-color: var(--blue-color); }
+.bg-yellow { background-color: var(--yellow-color); }
+.bg-purple { background-color: var(--purple-color); }
+.bg-red    { background-color: var(--red-color); }
+.bg-green  { background-color: var(--green-color); }
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  background-color: var(--bg);
+}
+
+body {
+  color: var(--font-color);
+  min-height: 100vh;
+}
+
+header {
+  color: var(--font-color-title);
+  font-size: 2rem;
+}
+
+p {
+  line-height: 1.5;
+  margin: var(--margin-txt);
+}
+
+ul {
+  list-style-position: inside;
+}
+
+.web-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+#navbar {
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: auto;
+  height: 100%;
+  width: 30vw;
+  position: fixed;
+  border: 2px solid #333;
+  padding: 1rem;
+  background-color: #ccc;
+}
+
+#navbar a {
+  display: block;
+  text-decoration: none;
+  padding: 1.25rem;
+  font-size: 1.25rem;
+}
+
+#navbar a:not(:last-child) {
+  border-bottom: 1px solid #333;
+}
+
+#navbar a:any-link {
+  color: var(--anchor-color);
+}
+
+#navbar a:hover,
+#navbar a:focus-visible {
+  color: var(--anchor-hover-color);
+  text-decoration: underline;
+}
+
+#navbar a:active {
+  color: var(--purple-color);
+}
+
+#main {
+  width: 70vw;
+  position: relative;
+  left: 30vw;
+  padding: 0.5rem 2rem;
+}
+
+#main header {
+  margin: 0.5em 0;
+}
+
+.main-section {
+  border-bottom: 1px solid #333;
+  padding: 0 0 2em 0;
+  margin: 2em 0;
+  scroll-margin-top: 2.75em;
+}
+
+a.anchor {
+  color: var(--blue-color);
+}
+a.anchor:hover {
+  color: var(--yellow-color);
+}
+a.anchor:active {
+  color: var(--purple-color);
+}
+
+code {
+  font-family: var(--font-code);
+  font-weight: 600;
+  background-color: var(--code-bg-color);
+  color: #ff79c6; /* Um rosa/roxo claro para destacar termos inline */
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+pre {
+  background-color: var(--code-bg-color);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1em 0;
+  border-left: 4px solid var(--purple-color); 
+}
+
+pre code {
+  color: var(--code-font-color);
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-weight: normal;
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (max-width: 762px) {
+  #navbar {
+    position: static;
+    width: 100%;
+  }
+
+  #main {
+    width: 100%;
+    position: static;
+  }
+}

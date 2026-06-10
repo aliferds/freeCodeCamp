@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Documentação Técnica de JavaScript</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="main-doc">
+
+        <nav id="navbar">
+            <header class="web-title">Doc JS</header>
+            <a href="#Introduction" class="nav-link">Introduction</a>
+            <a href="#Pre-requisitos" class="nav-link">Pre-requisitos</a>
+            <a href="#JavaScript_vs_Java" class="nav-link">JavaScript vs Java</a>
+            <a href="#Hello_World" class="nav-link">Hello World</a>
+            <a href="#variaveis" class="nav-link">Variaveis</a>
+            <a href="#Declarando_Variaveis" class="nav-link">Declarando Variaveis</a>
+            <a href="#Escopo_de_variaveis" class="nav-link">Escopo de Variaveis</a>
+            <a href="#Variaveis_Globais" class="nav-link">Variaveis Globais</a>
+            <a href="#Constantes" class="nav-link">Constantes</a>
+            <a href="#Tipos_de_Dados" class="nav-link">Tipos de Dados</a>
+            <a href="#Estrutura_If...Else" class="nav-link">Estrutura If...Else</a>
+            <a href="#Estrutura_While" class="nav-link">Estrutura While</a>
+            <a href="#Functions" class="nav-link">Functions</a>
+            <a href="#Referencia" class="nav-link">Referencia</a>
+        </nav>
+
+        <section id="main">
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <p>
+                    <strong>JavaScript (JS)</strong> é uma linguagem de programação leve, versátil e orientada a objetos, usada principalmente para dar vida e interatividade a páginas web.
+                </p>
+                <p>
+                    Ela roda dentro de um ambiente (como o seu navegador) e interage com os elementos dele. O JS já vem com ferramentas prontas (como as funções de <code class="language-js">Array</code>, <code class="language-js">Date</code> e <code class="language-js">Math</code>) e pode ser usado em duas frentes:
+                </p>
+                <ul>
+                    <li><strong>Client-side (Frontend):</strong> Roda no navegador do usuário, controlando o HTML e respondendo a ações como cliques de mouse e digitação.</li>
+                    <li><strong>Server-side (Backend):</strong> Roda no servidor, permitindo que a aplicação converse com bancos de dados e manipule arquivos.</li>
+                </ul>
+            </section>
+
+            <section class="main-section" id="Pre-requisitos">
+                <header>Pre-requisitos</header>
+                <p>Antes de começar, é recomendável que você conheça o básico de:</p>
+                <ul>
+                    <li>Como funciona a Internet e a Web.</li>
+                    <li>Linguagem de marcação <strong>HTML</strong>.</li>
+                    <li>Lógica de programação (se for iniciante do zero, procure um tutorial básico de lógica primeiro).</li>
+                </ul>
+            </section>
+
+            <section class="main-section" id="JavaScript_vs_Java">
+                <header>JavaScript vs Java</header>
+                <p>
+                    <strong>Apesar do nome parecido, JavaScript e Java são linguagens totalmente diferentes.</strong> 
+                </p>
+                <p>
+                    O JS apenas herdou algumas regras de escrita e estruturas de controle do Java (o que motivou a mudança de nome de <em>LiveScript</em> para <em>JavaScript</em> na época). Porém, enquanto o Java é uma linguagem rígida e fortemente tipada, o JavaScript é livre, flexível e baseado em <strong>protótipos</strong> (onde os objetos herdam características diretamente de outros objetos de forma dinâmica).
+                </p>
+            </section>
+
+            <section class="main-section" id="Hello_World">
+                <header>Hello World</header>
+                <p>Para testar seu primeiro código em JavaScript, execute a função abaixo:</p>
+                <pre><code class="language-js">function greetMe(yourName) {
+    alert("Hello " + yourName);
+}
+
+greetMe("World");</code></pre>
+            </section>
+
+            <section class="main-section" id="variaveis">
+                <header>Variaveis</header>
+                <p>Variáveis são "caixas" usadas para guardar dados no seu programa. Os nomes que damos a elas (identificadores) têm regras:</p>
+                <ul>
+                    <li>Devem começar com uma letra, sublinhado (<code class="language-js">_</code>) ou cifrão (<code class="language-js">$</code>).</li>
+                    <li>Podem conter números, mas nunca começar com eles.</li>
+                    <li>São <strong>case-sensitive</strong> (diferenciam maiúsculas de minúsculas). <code class="language-js">MinhaVariavel</code> e <code class="language-js">minhavariavel</code> são duas coisas diferentes.</li>
+                </ul>
+            </section>
+
+            <section class="main-section" id="Declarando_Variaveis">
+                <header>Declarando Variaveis</header>
+                <p>Você pode criar uma variável de três formas:</p>
+                
+                <p>1. Com a palavra-chave <code class="language-js">var</code> (escopo global ou de função):</p>
+                <pre><code class="language-js">var x = 42;</code></pre>
+
+                <p>2. Apenas atribuindo um valor (cria uma variável global oculta). <strong>Evite usar este método.</strong></p>
+                <pre><code class="language-js">x = 42;</code></pre>
+
+                <p>3. Com a palavra-chave <code class="language-js">let</code> (forma moderna, com escopo de bloco):</p>
+                <pre><code class="language-js">let y = 13;</code></pre>
+            </section>
+
+            <section class="main-section" id="Escopo_de_variaveis">
+                <header>Escopo de Variaveis</header>
+                <p>O escopo define onde sua variável existe e pode ser usada:</p>
+                <ul>
+                    <li><strong>Global:</strong> Declarada fora de qualquer função. Pode ser acessada por qualquer parte do código.</li>
+                    <li><strong>Local:</strong> Declarada dentro de uma função. Só existe lá dentro.</li>
+                </ul>
+                <p>Variáveis criadas com <code class="language-js">let</code> respeitam blocos (como o <code class="language-js">if</code> ou <code class="language-js">while</code>), enquanto <code class="language-js">var</code> não:</p>
+                <pre><code class="language-js">if (true) {
+    let bloco = "secreto";
+}
+console.log(bloco); // Erro! 'bloco' não existe aqui fora.</code></pre>
+            </section>
+
+            <section class="main-section" id="Variaveis_Globais">
+                <header>Variaveis Globais</header>
+                <p>
+                    No navegador, todas as variáveis globais viram propriedades do objeto <code class="language-js">window</code>. Isso significa que você pode acessá-las usando <code class="language-js">window.minhaVariavel</code>.
+                </p>
+            </section>
+
+            <section class="main-section" id="Constantes">
+                <header>Constantes</header>
+                <p>Você pode criar um valor que não pode ser alterado usando <code class="language-js">const</code>. Elas seguem as mesmas regras de escopo do <code class="language-js">let</code>, mas não aceitam reatribuição e precisam de um valor inicial obrigatório.</p>
+                <pre><code class="language-js">const PI = 3.14;</code></pre>
+                <p><strong>Atenção:</strong> Se a constante for um objeto, você ainda pode alterar as propriedades de dentro dele, só não pode substituir o objeto inteiro.</p>
+                <pre><code class="language-js">const MEU_OBJETO = {"chave": "valor"};
+MEU_OBJETO.chave = "outroValor"; // Permitido!</code></pre>
+            </section>
+
+            <section class="main-section" id="Tipos_de_Dados">
+                <header>Tipos de Dados</header>
+                <p>O JavaScript possui <strong>7 tipos básicos</strong> de dados:</p>
+                <ul>
+                    <li><strong>Primitivos:</strong> <code class="language-js">Boolean</code> (true/false), <code class="language-js">null</code> (vazio voluntário), <code class="language-js">undefined</code> (não definido), <code class="language-js">Number</code> (números), <code class="language-js">String</code> (textos) e <code class="language-js">Symbol</code> (identificador único).</li>
+                    <li><strong>Object:</strong> Estruturas complexas que guardam coleções de dados.</li>
+                </ul>
+            </section>
+
+            <section class="main-section" id="Estrutura_If...Else">
+                <header>Estrutura If...Else</header>
+                <p>Usa-se o <code class="language-js">if</code> para rodar um código caso uma condição seja verdadeira, e o <code class="language-js">else</code> caso seja falsa:</p>
+                <pre><code class="language-js">if (idade >= 18) {
+    status = "Maior de idade";
+} else {
+    status = "Menor de idade";
+}</code></pre>
+                <p>Dica didática: Use sempre chaves <code class="language-js">{}</code> para envolver as ações, evitando erros de leitura.</p>
+            </section>
+
+            <section class="main-section" id="Estrutura_While">
+                <header>Estrutura While</header>
+                <p>O laço <code class="language-js">while</code> repete um bloco de código <strong>enquanto</strong> a condição definida for verdadeira:</p>
+                <pre><code class="language-js">var n = 0;
+while (n < 3) {
+    n++;
+}
+// O loop roda 3 vezes e para quando 'n' vira 3.</code></pre>
+            </section>
+
+            <section class="main-section" id="Functions">
+                <header>Functions</header>
+                <p>Funções são blocos de código reaproveitáveis. Para criá-las, definimos o nome, os parâmetros (dados de entrada) e o bloco de execução:</p>
+                <pre><code class="language-js">function quadrado(numero) {
+    return numero * numero; // Retorna o resultado
+}</code></pre>
+                <p>Valores primitivos (como números) são passados para as funções por valor. Ou seja, mudar o número dentro da função não altera a variável original do lado de fora.</p>
+            </section>
+
+            <section class="main-section" id="Referencia">
+                <header>Referencia</header>
+                <ul>
+                    <li>Conteúdo adaptado do tutorial de JavaScript da <a class="anchor" href="https://www.w3schools.com/js/DEFAULT.asp" target="_blank">W3Schools</a>.</li>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    </body>
+  </body>
+</html>
