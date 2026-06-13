@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-gray: #d1d1d1;
+  --oblicuous-white: #f1f2f4;
+  --brand-color: #ff8008;
+}
+
+body {
+  background-color: var(--oblicuous-white, #f1f2f4);
+  font-family: 'Arial', sans-serif;
+  text-size: 16px;
+  padding: 0 2rem;
+  /* max-width: 1200px; */
+  widht: 100%;
+  min-height: 100svh;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+
+/* 
+================================ HEADER ==================================
+*/
+
+
+header, nav ul, #logo {
+  display: flex;
+}
+
+header {
+  justify-content: space-between;
+  padding: 1rem;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  background-color: inherit;
+}
+
+nav ul {
+  height: 100%;
+  gap: 0.25rem 0.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: inherit;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: var(--brand-color, orangered);
+}
+
+
+#logo {
+  align-items: center;
+  width: fit-content;
+}
+
+
+/* 
+================================ UTILS ==================================
+*/
+
+ul.no-ls {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.rounded {
+  border-radius: 6px;
+}
+
+/* 
+===========================   HERO  ======================================
+*/
+
+.hero {
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.25rem;
+}
+
+#form {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  align-items: center;
+  gap: 1rem;
+}
+
+#form input, .card button {
+  line-heght: 1.25rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+#form .btn, .btn {
+  width: fit-content;
+  background-color: var(--brand-color, orange);
+  border: 1 px solid var(--dark-gray, gray);
+  color: var(--oblicuous-white, white);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+#form .btn:hover, .btn:hover {
+  background-color: orangered;
+}
+
+
+/* 
+============================= FEATURES ========================================
+*/
+
+#features {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+#features ul li {
+  display: flex;
+  align-itens: center;
+}
+
+#features ul li:not(:last-child) {
+  margin-bottom: 1rem; 
+}
+
+#features .icon {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+#features .icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#features li:first-of-type {
+  overflow: hidden;
+}
+
+#features li:nth-of-type(1) img {
+  transform: scale(1.3);
+}
+
+
+#features .feature {
+  margin: auto 0;
+  padding-left: 2rem;
+}
+
+#features .feature h2{
+  margin-bottom: 1rem;
+}
+#features .feature p{
+  max-width: 800px;
+}
+
+/* 
+======================= HOW IT WORKS ========================================
+*/
+
+#how-it-works {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 
+============================= PRICING ========================================
+*/
+
+#pricing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.card {
+  width: 280px;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card h2 {
+  width: 100%;
+  background-color: var(--dark-gray, gray);
+}
+
+.card .price {
+  font-size: 1.5rem;
+}
+
+.card ul li:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
+.card img {
+  width: 100%;
+}
+
+/* 
+============================= FOOTER ========================================
+*/
+footer {
+  padding: 1rem;
+  background-color: var(--dark-gray, #d1d1d1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+footer .footer-links {
+  display: flex;
+  gap: 2rem;
+  padding: 0 1rem 0;
+}

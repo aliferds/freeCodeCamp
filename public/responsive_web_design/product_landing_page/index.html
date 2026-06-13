@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- sticky -->
+   <header id="header">
+    <div id="logo">
+      <img src="logo.png" alt="original modelism logo" id="header-img" />
+      <h1>Original Modelism</h1>
+    </div>
+      <nav id="nav-bar">
+      <ul class="no-ls">
+        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="#how-it-works">How it works</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+      </ul>
+    </nav>
+   </header>
+   <main>
+      <section class="hero">
+        <h2>Scratch-built, meticulously crafted masterpieces</h2>
+        <form id="form" action="">
+          <!-- https://www.freecodecamp.org/email-submit -->
+          <input type="email" id="email" name="email" placeholder="email@exemple.com" pattern="" class="rounded" required />
+          <input class="rounded btn" type="submit" value="Get started" id="submit" name="submit" />
+        </form>
+      </section>
+      <section id="features">
+        <ul class="no-ls">
+          <li>
+            <div class="icon">
+              <img src="https://img.icons8.com/?size=100&id=A2sfeYasHHVe&format=png&color=ff8008" alt="shipping icon">
+            </div>
+            <div class="feature">
+              <h2>Premium Materials</h2>
+              <p>
+                Our models use the best materials which is sourced locally. This will increase the longevity of your purchase.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="https://img.icons8.com/?size=100&id=9341&format=png&color=ff8008" alt="shipping icon">
+            </div>
+            <div class="feature">
+              <h2>Fast Shipping</h2>
+              <p>
+                We make sure you receive your model as soon as we have finished making it. We also provide free returns if you are not satisfied.
+              </p>
+            </div>
+            </li>
+          <li>
+            <div class="icon">
+              <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=ff8008" alt="quality assurance icom">
+            </div>
+            <div class="feature">
+              <h2>Quality Assurance</h2>
+              <p>
+                For every purchase you make, we will ensure there are no damaged or warped parts, and we will check and test the fit and alignment of your model kit.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section id="how-it-works">
+        <iframe class="rounded" width="560" height="315" src="https://www.youtube.com/embed/UoTjji7VQp8?si=uA5pEBwGIenZyB5y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="video"></iframe>
+      </section>
+      <section id="pricing">
+        <div class="card">
+          <img src="https://http2.mlstatic.com/D_NQ_NP_2X_611191-MLA92013047985_092025-F.webp" alt="model of Brandenburger Tor" class="rounded" />
+          <h2>Brandenburger Tor</h2>
+          <span class="price">$45,00</span>
+          <ul class="no-ls">
+            <li>Ideal model for beginners</li>
+            <li>No use of chemical glues</li>
+            <li>Base included for immediate display</li>
+            <li>High fidelity printed textures</li>
+          </ul>
+          <button class="btn">select</button>
+        </div>
+        <div class="card">
+          <img src="https://m.media-amazon.com/images/I/81EzPrF7kmS._AC_SL1500_.jpg" alt="model of Taj Mahal" class="rounded" />
+          <h2>Architecture Taj Mahal</h2>
+          <span class="price">$195,00</span>
+          <ul class="no-ls">
+            <li>High quality rigid plastic parts</li>
+            <li>Advanced geometric construction techniques</li>
+            <li>Manual with historical contextualization of the monument</li>
+            <li>Ideal final size for room decoration</li>
+          </ul>
+          <button class="btn">select</button>
+        </div>
+        <div class="card">
+          <img src="https://cdn.dlojavirtual.com/static1/105429/sku/mais-plastimodelismo-embarcacoes-hms-victory-model-set-revell-65408-1-225-p-1746707480112.jpg" alt="model of the shipe Victory" class="rounded" />
+          <h2>HMS Victory</h2>
+          <span class="price">$88,00</span>
+          <ul class="no-ls">
+            <li>Detailed plastic candles with fabric texture</li>
+            <li>Set type kit that includes basic paints</li>
+            <li>Statement piece with strong visual aesthetic appeal</li>
+            <li>Perfect for applying paint aging techniques</li>
+          </ul>
+          <button class="btn">select</button>
+        </div>
+      </section>
+
+   </main>
+   <footer>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contract</a>
+    </div>
+    <div>
+      Copyright 2026, Original Modelism
+    </div>
+   </footer>
+</body>
+</html>
