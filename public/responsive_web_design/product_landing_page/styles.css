@@ -14,7 +14,6 @@ body {
   background-color: var(--oblicuous-white, #f1f2f4);
   font-family: 'Arial', sans-serif;
   text-size: 16px;
-  padding: 0 2rem;
   /* max-width: 1200px; */
   widht: 100%;
   min-height: 100svh;
@@ -29,15 +28,30 @@ body {
 
 header, nav ul, #logo {
   display: flex;
+  flex-wrap: wrap;
 }
 
 header {
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 2rem;
   position: sticky;
+  z-index: 999;
   width: 100%;
   top: 0;
   background-color: inherit;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media(min-width: 701px) {
+  nav{
+    margin: 0;
+  }
 }
 
 nav ul {
@@ -81,6 +95,10 @@ section {
 
 .rounded {
   border-radius: 6px;
+}
+
+main {
+  padding: 0 2rem;
 }
 
 /* 
@@ -135,9 +153,36 @@ section {
   width: fit-content;
 }
 
-#features ul li {
+#features ul {
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+#features ul li {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   align-itens: center;
+  justify-content: center;
+}
+
+@media (min-width: 943px) and (max-width: 974px) {
+  #features ul li {
+    max-width: 760px;
+  }
+}
+
+@media (min-width: 975px) {
+  #features ul li {
+    justify-content: start;
+  }
+
+  #features .feature {
+    width: calc(100% - 80px);
+  }
 }
 
 #features ul li:not(:last-child) {
@@ -148,7 +193,9 @@ section {
   width: 80px;
   height: 80px;
   overflow: hidden;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #features .icon img {
@@ -157,12 +204,12 @@ section {
   object-fit: contain;
 }
 
-#features li:first-of-type {
+#features li:nth-of-type(1) {
   overflow: hidden;
 }
 
 #features li:nth-of-type(1) img {
-  transform: scale(1.3);
+  transform: scale(1.35);
 }
 
 
@@ -233,7 +280,7 @@ section {
 ============================= FOOTER ========================================
 */
 footer {
-  padding: 1rem;
+  padding: 1rem 2rem;
   background-color: var(--dark-gray, #d1d1d1);
   display: flex;
   flex-direction: column;
